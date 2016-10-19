@@ -214,4 +214,3 @@ EditChannelPurposeModal.propTypes = {
     onModalDismissed: React.PropTypes.func.isRequired
 };
 
-export default injectIntl(EditChannelPurposeModal);

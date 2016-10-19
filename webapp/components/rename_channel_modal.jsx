@@ -308,4 +308,3 @@ RenameChannelModal.propTypes = {
     channel: React.PropTypes.object.isRequired
 };
 
-export default injectIntl(RenameChannelModal);

@@ -369,6 +369,10 @@ func (u *User) IsOAuthUser() bool {
 	if u.AuthService == USER_AUTH_SERVICE_GITLAB {
 		return true
 	}
+
+	if u.AuthService == USER_AUTH_SERVICE_GOOGLE {
+		return true
+	}
 	return false
 }
 

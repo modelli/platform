@@ -281,6 +281,7 @@ func getClientConfig(c *model.Config) map[string]string {
 	props["AndroidAppDownloadLink"] = *c.NativeAppSettings.AndroidAppDownloadLink
 	props["IosAppDownloadLink"] = *c.NativeAppSettings.IosAppDownloadLink
 
+	props["EnableSignUpWithGoogle"] = strconv.FormatBool(c.GoogleSettings.Enable)
 	if IsLicensed {
 		if *License.Features.CustomBrand {
 			props["EnableCustomBrand"] = strconv.FormatBool(*c.TeamSettings.EnableCustomBrand)
