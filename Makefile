@@ -248,7 +248,7 @@ build-windows: .prebuild prepare-enterprise
 	@echo Build Windows amd64
 	env GOOS=windows GOARCH=amd64 $(GO) install $(GOFLAGS) $(GO_LINKER_FLAGS) $(go list ./... | grep -v /vendor/) 
 
-build: build-linux build-windows build-osx
+build: build-linux build-osx build-windows
 
 build-client:
 	@echo Building mattermost web app
