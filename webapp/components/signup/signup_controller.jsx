@@ -172,6 +172,24 @@ export default class SignupController extends React.Component {
             );
         }
 
+        //TODO: Move this to a non-clicensed way
+        if (global.window.mm_config.EnableSignUpWithGoogle === 'true') {
+            signupControls.push(
+                <a
+                    className='btn btn-custom-login btn--full google'
+                    key='google'
+                    href={Client.getOAuthRoute() + '/google/signup' + window.location.search}
+                >
+                    <span className='icon'/>
+                    <span>
+                        <FormattedMessage
+                            id='signup.google'
+                            defaultMessage='Google Account'
+                        />
+                    </span>
+                </a>
+            );
+        }
         if (global.window.mm_license.IsLicensed === 'true' && global.window.mm_config.EnableSignUpWithGoogle === 'true') {
             signupControls.push(
                 <a
